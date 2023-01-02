@@ -7,7 +7,8 @@ body {
   height: 60px;
   width: 100%;
   display: flex;
-  position: relative;
+  position: fixed;
+  z-index: 1;
 }
 
 #open-nav-btn {
@@ -58,6 +59,24 @@ body {
 
 .closed {
   display: none !important;
+}
+
+/*Header*/
+header {
+  position: relative;
+  box-sizing: border-box;
+  padding: 60px 30px;
+  background: url('./assets/instruments_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.header-content {
+  border: 10px solid white;
+  background: #e3e3e3;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 @media screen and (min-width: 768px) {
