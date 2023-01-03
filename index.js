@@ -1,45 +1,45 @@
 const artistArray = [
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Duke Elington',
+    aka: 'Beyond category',
+    data: 'Ellington wrote or collaborated on more than one thousand compositions; his extensive body of work is the largest recorded personal jazz legacy, and many of his pieces have become standards.',
+    image: './assets/duke.png',
+    image_alt: 'Duke Elington photo',
   },
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Betty Carter',
+    aka: 'The only one',
+    data: 'Known for her improvisational technique, scatting and other complex musical abilities that demonstrated her vocal talent and imaginative interpretation of lyrics and melodies',
+    image: './assets/betty.png',
+    image_alt: 'Betty Carter photo',
   },
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Louis Armstrong',
+    aka: '"Satchmo", "Satch", and "Pops"',
+    data: 'He was among the most influential figures in jazz. His career spanned five decades and several eras in the history of jazz.',
+    image: './assets/louis.png',
+    image_alt: 'Louis Armstrong photo',
   },
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Billie Holiday',
+    aka: 'Lady Day',
+    data: 'Holiday had an innovative influence on jazz music and pop singing. Her vocal style, strongly inspired by jazz instrumentalists, pioneered a new way of manipulating phrasing and tempo.',
+    image: './assets/billie.png',
+    image_alt: 'Billie Holiday photo',
   },
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Miles Davis',
+    aka: 'Prince of Darkness',
+    data: 'He is among the most influential and acclaimed figures in the history of jazz and 20th-century music.',
+    image: './assets/miles.png',
+    image_alt: 'Miles Davis photo',
   },
   {
-    name: 'Nelson Araujo',
-    aka: 'The flow',
-    data: 'Nelson is the top jazz singer in unite states. His best song is "Remeber me".',
-    image: './assets/time_icon.svg',
-    image_alt: 'Description of image',
+    name: 'Diana Krall',
+    aka: 'The second greatest jazz artist of the decade 2000-2010',
+    data: 'Krall is the only jazz singer to have had eight albums debuting at the top of the Billboard Jazz Albums.',
+    image: './assets/diana.png',
+    image_alt: 'Diana Krall photo',
   },
 ];
 
@@ -117,7 +117,15 @@ const init = () => {
   const navMenu = document.getElementById('nav-menu');
   const closeMenuBtn = document.getElementById('close-nav-btn');
   const artistContainer = document.getElementById('artist-list');
+  const menuItems = document.getElementsByClassName('menu-item');
 
+  for(let i = 0; i < menuItems.length; i += 1){
+    menuItems[i].addEventListener('click', () => {
+      openMenuBtn.classList.toggle('closed');
+      closeMenuBtn.classList.toggle('closed');
+      navMenu.classList.toggle('nav-mobile');
+    });
+  }
   openMenuBtn.addEventListener('click', () => {
     openMenuBtn.classList.toggle('closed');
     closeMenuBtn.classList.toggle('closed');
