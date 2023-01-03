@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: 'Lato-Italic';
+  src: url('./assets/fonts/Lato-Italic.ttf');
+}
+
+@font-face {
   font-family: 'Cocogoose-Regular';
   src: url('./assets/fonts/Cocogoose-Light-trial.ttf');
 }
@@ -27,9 +32,75 @@
   font-family: 'Cocogoose-Black';
   src: url('./assets/fonts/Cocogoose-Regular.ttf');
 }
+/*Buttons*/
+.main-btn {
+  width: 80%;
+  max-width: 260px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #ec5242;
+  font-size: 18px;
+  transition: all 250ms ease-in-out;
+}
 
+.main-btn:hover {
+  background-color: white;
+  color: #ec5242;
+}
+
+.main-btn:active {
+  border-width: 2px;
+}
+
+.secondary-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #e3e3e3;
+  font-size: 14px;
+  transition: all 250ms ease-in-out;
+  border-radius: 2px;
+  background: white;
+}
+
+.secondary-btn:hover {
+  background-color: #282a34;
+  color: white;
+}
+
+.secondary-btn:active {
+  border-width: 2px;
+}
+
+/*Bg-Colors*/
+.primary-background {
+  background: #5e5e5e;
+}
+
+.secondary-background {
+  background: #ec5242;
+}
+
+.third-background {
+  background: #d3d3d3;
+}
+
+.fourth-background {
+  background:  #282a34;
+}
+
+/*Text-colors*/
 .primary-color {
-  color: #272a31;
+  color: #5e5e5e;
 }
 
 .secondary-color {
@@ -40,6 +111,15 @@
   color: #d3d3d3;
 }
 
+.fourth-color {
+  color: #282a34;
+}
+
+.white-color {
+  color: white;
+}
+
+/*Fonts*/
 .coco-font {
   font-family: 'Cocogoose-Regular', sans-serif;
 }
@@ -56,6 +136,10 @@
   font-family: 'Lato-Regular', sans-serif;
 }
 
+.lato-font-italic {
+  font-family: 'Lato-Italic', sans-serif;
+}
+
 .lato-font-bold {
   font-family: 'Lato-Bold', sans-serif;
 }
@@ -64,6 +148,9 @@
   font-family: 'Lato-Black', sans-serif;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
 body {
   background-color: #f6f6f6;
   margin: 0;
@@ -146,6 +233,145 @@ header {
   padding: 20px;
 }
 
+h1 {
+  color: #ec5242;
+  background: url('./assets/h1_bg.jpg') no-repeat;
+  background-position: center;
+  background-clip: text;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+}
+
+/*Logistic Section*/
+#logistic {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background: url('./assets/logistic_bg.jpg'), #282a34;
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+.title-deco {
+  height: 2px;
+  width: 50px;
+}
+
+h2.lato-font.white-color {
+  margin-bottom: 14px;
+}
+
+#logistic-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.logistic-item {
+  display: flex;
+  background: #80808050;
+  align-items: center;
+  padding: 20px 6px;
+}
+
+.logistic-item-icon,
+.logistic-item-label {
+  flex: 1 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.logistic-item-content {
+  flex: 2 0 0;
+}
+
+/*Artists*/
+#artists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 0;
+}
+
+.artist-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#artist-list {
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.card-image {
+  display: flex;
+  flex: 1 0 0;
+  background: gray;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0 0;
+  gap: 6px;
+}
+
+.card-container > * {
+  margin: 0;
+}
+
+.little-deco {
+  height: 2px;
+  width: 50px;
+}
+
+/*Partners*/
+#partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+#partners-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.partner-item {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  color: #5e5e5e;
+  font-family: 'Lato-Bold';
+}
 @media screen and (min-width: 768px) {
   #open-nav-btn {
     display: none;

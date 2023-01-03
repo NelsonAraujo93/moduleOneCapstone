@@ -8,59 +8,115 @@
   <title>Module 1 Capstone</title>
 </head>
 <body>
-  <main>
-    <nav id="main-navigator">
-      <ul id="nav-menu">
-        <li>
-          <a>
-            <img>
-          </a>
-        </li>
-        <li>
-          <a>About</a>
-        </li>
-        <li>
-          <a>Program</a>
-        </li>
-        <li>
-          <a>Join</a>
-        </li>
-        <li>
-          <a>Sponsor</a>
-        </li>
-        <li>
-          <a>News</a>
-        </li>
-        <li>
-          <button>CC Campaign</button>
-        </li>
-      </ul>
-      <button id="open-nav-btn"></button>
-      <button id="close-nav-btn" class="closed"></button>
-    </nav>   
+  <nav id="main-navigator">
+    <ul id="nav-menu">
+      <li>
+        <a>
+          <img>
+        </a>
+      </li>
+      <li>
+        <a>About</a>
+      </li>
+      <li>
+        <a>Program</a>
+      </li>
+      <li>
+        <a>Join</a>
+      </li>
+      <li>
+        <a>Sponsor</a>
+      </li>
+      <li>
+        <a>News</a>
+      </li>
+      <li>
+        <button>CC Campaign</button>
+      </li>
+    </ul>
+    <button id="open-nav-btn"></button>
+    <button id="close-nav-btn" class="closed"></button>
+  </nav>   
+  <main id="landing">
     <header>
-      <h2>"Hello! Sharing world"</h2>
-      <h1>Creative commons global summit 2023</h1>
+      <h2 class="lato-font secondary-color">"Hello! Sharing world"</h2>
+      <h1 class="lato-font-extraBold secondary-color uppercase">Creative commons global summit 2023</h1>
       <div class="header-content">
-        <p>A joyful celebration believing in the value of opennes and sharing, creating a positive change with peopple from over 80  countries is taking place in January 10th in Cali, Colombia.</p>
+        <p class="lato-font primary-color">A joyful celebration believing in the value of opennes and sharing, creating a positive change with peopple from over 80  countries is taking place in January 10th in Cali, Colombia.</p>
       </div>
       <div class="header-info">
-        <h2>2023.1.15(SUN)</h2>
+        <h2 class="lato-font-extraBold primary-color">2023.1.15(SUN)</h2>
         <h4>@ National Jazz Musseum</h4>
       </div>
     </header>
-    <section id="logistic">
-      <h2>Main Program</h2>
-      <ul>
+    <section id="logistic" class="fourth-background">
+      <h2 class="lato-font white-color">Main Program</h2>
+      <div class="title-deco secondary-background"></div>
+      <ul id="logistic-list">
         <li>
           <div class="logistic-item">
-            <div class="logistic-item-icon"></div>
-            <div class="logistic-item-label">Starting</div>
-            <div class="logistic-item-content">Remember to get your ticket and your id to verify.</div>
+            <div class="logistic-item-icon">
+              <img src="/assets/time_icon.svg">
+            </div>
+            <div class="logistic-item-label lato-font-bold secondary-color">Starting</div>
+            <div class="logistic-item-content lato-font third-color">Remember to get your ticket and your id to verify.</div>
+          </div>
+        </li>
+        <li>
+          <div class="logistic-item">
+            <div class="logistic-item-icon">
+              <img src="/assets/time_icon.svg">
+            </div>
+            <div class="logistic-item-label lato-font-bold secondary-color">Starting</div>
+            <div class="logistic-item-content lato-font third-color">Remember to get your ticket and your id to verify.</div>
+          </div>
+        </li>
+        <li>
+          <div class="logistic-item">
+            <div class="logistic-item-icon">
+              <img src="/assets/time_icon.svg">
+            </div>
+            <div class="logistic-item-label lato-font-bold secondary-color">Starting</div>
+            <div class="logistic-item-content lato-font third-color">Remember to get your ticket and your id to verify.</div>
+          </div>
+        </li>
+        <li>
+          <div class="logistic-item">
+            <div class="logistic-item-icon">
+              <img src="/assets/time_icon.svg">
+            </div>
+            <div class="logistic-item-label lato-font-bold secondary-color">Starting</div>
+            <div class="logistic-item-content lato-font third-color">Remember to get your ticket and your id to verify.</div>
           </div>
         </li>
       </ul>
+      <button class="main-btn secondary-background white-color lato-font-bold"> Join Us</button>
     </section>
+    <section id="artists">
+      <h2 class="lato-font fourth-color">Featured Artists</h2>
+      <div class="title-deco secondary-background"></div>
+      <ul id="artist-list"></ul>
+    </section>
+    <section id="partners" class="fourth-background">
+      <h2 class="lato-font white-color">Partners</h2>
+      <div class="title-deco secondary-background"></div>
+      <ul id="partners-list">
+        <li class="partner-item">Logo 1</li>
+        <li class="partner-item">Logo 2</li>
+        <li class="partner-item">Logo 3</li>
+        <li class="partner-item">Logo 4</li>
+        <li class="partner-item">Logo 5</li>
+      </ul>
+    </section>
+    <footer class="white-background">
+      <div class="logo-container">
+          <img></img>
+      </div>
+      <h5 class="lato-font fourth-color">
+        2023 Vagos Studios S.a.S.
+        All Rigths Reserved.
+      </h5>
+    </footer>
   </main>
  
   <script src="./index.js"></script>
