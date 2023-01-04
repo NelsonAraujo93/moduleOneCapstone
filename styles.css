@@ -33,6 +33,9 @@
   src: url('./assets/fonts/Cocogoose-Regular.ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /*globals*/
 .full-width {
   width: 100%;
@@ -190,12 +193,12 @@ body {
 }
 
 #main-navigator {
-  height: 60px;
+  height: 80px;
   width: 100%;
   display: flex;
   position: fixed;
   z-index: 1;
-  justify-content: center;
+  background: transparent;
 }
 
 #open-nav-btn {
@@ -252,8 +255,12 @@ body {
 .nav-mobile a {
   font-size: 30px;
   font-family: 'Lato-Bold';
-  color: #c34a31;
+  color: #282a34;
   text-decoration: none;
+}
+
+.nav-mobile a.active {
+  color: #ec5242;
 }
 
 /*Header*/
@@ -338,7 +345,7 @@ h2.lato-font.white-color {
   align-items: center;
 }
 .logistic-item-content {
-  flex: 2 0 0;
+  flex: 50% 0 0;
 }
 
 .logistic-item-icon img {
@@ -347,6 +354,7 @@ h2.lato-font.white-color {
   background: #ffffffad;
   border-radius: 50%;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 .logistic-item-icon {
@@ -490,6 +498,8 @@ footer {
   text-align: center;
   padding: 50px 20px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .big-logo-container {
@@ -500,6 +510,7 @@ footer {
   align-items: center;
   position: relative;
   border: 2px solid #e3e3e3;
+  max-width: 260px;
 }
 
 .big-logo-container img {
@@ -511,6 +522,8 @@ footer {
   text-align: center;
   padding: 50px 20px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 ul#festival-list {
@@ -531,7 +544,7 @@ ul#festival-list {
 
 .festival-item {
   height: 200px;
-  background: url('./assets/2021.jpg'),#c34a31;
+  background: url('./assets/2021.jpg'),#ec5242;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -543,7 +556,7 @@ ul#festival-list {
 }
 
 .festival-item.twenty2 {
-  background: url('./assets/2022.jpg'),#c34a31;
+  background: url('./assets/2022.jpg'),#ec5242;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -553,17 +566,130 @@ ul#festival-list {
   margin-bottom: 10px;
 }
 
+.rigth-container {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
+  header {
+    padding: 180px 30px;
+  }
+
   #open-nav-btn {
     display: none;
+  }
+
+  #main-navigator {
+    justify-content: center;
+    background: white;
+    box-shadow: 0 1px 6px 2px #00000066;
   }
 
   #nav-menu {
     display: flex;
     flex-direction: row !important;
-    justify-content: flex-end;
+    justify-content: space-between;
     list-style: none;
+    align-items: center;
     gap: 20px;
+    width: 100%;
+    padding: 0 20px;
   }
-  
+
+  li.main-nav-item {
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .main-logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  a.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Lato-Regular', sans-serif;
+    color: #282a34;
+  }
+
+  a.menu-item.active{
+    color: #ec5242;
+  }
+
+  #logistic-list {
+    flex-direction: row;
+    gap: 4px;
+    padding: 70px 0;
+    box-sizing: border-box;
+  }
+
+  .logistic-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 3px;
+    box-sizing: border-box;
+    min-height: 288px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .logistic-item:hover {
+    border: 2px solid #e3e3e3;
+    transform: scale(1.02);
+  }
+
+  #artist-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .artist-card {
+    flex: 45% 0 0;
+  }
+
+  .card-container p {
+    font-size: 14px;
+  }
+
+  .partner-item {
+    max-width: 260px;
+  }
+
+  .logo-container {
+    width: 15%;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  ul#festival-list {
+    flex-direction: row;
+  }
+
+  #festival-list li {
+    width: 45%;
+  }
+
+  #past {
+    padding: 90px 20px;
+  }
+
+  footer {
+    max-width: unset;
+  }
+
+  footer .wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .rigth-container {
+    text-align: left;
+  }
 }

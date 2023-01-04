@@ -115,17 +115,26 @@ const getArtistsResume = (parent) => {
 const init = () => {
   const openMenuBtn = document.getElementById('open-nav-btn');
   const navMenu = document.getElementById('nav-menu');
+  const programSection = document.getElementById('logistic');
+  const artistsSection = document.getElementById('artists');
+  const partnersSection = document.getElementById('partners');
   const closeMenuBtn = document.getElementById('close-nav-btn');
   const artistContainer = document.getElementById('artist-list');
-  const menuItems = document.getElementsByClassName('menu-item');
+  const menuItems = document.querySelectorAll('.menu-item');
 
   for(let i = 0; i < menuItems.length; i += 1){
-    menuItems[i].addEventListener('click', () => {
-      openMenuBtn.classList.toggle('closed');
-      closeMenuBtn.classList.toggle('closed');
-      navMenu.classList.toggle('nav-mobile');
-    });
-  }
+    if(window.innerWidth<768){
+      menuItems[i].addEventListener('click', () => {
+        openMenuBtn.classList.toggle('closed');
+        closeMenuBtn.classList.toggle('closed');
+        navMenu.classList.toggle('nav-mobile');
+        if(menuItems[i]===4){
+          menuItems[i].classList.add('active');
+        }
+      });
+    }
+  };
+
   openMenuBtn.addEventListener('click', () => {
     openMenuBtn.classList.toggle('closed');
     closeMenuBtn.classList.toggle('closed');
@@ -136,8 +145,31 @@ const init = () => {
     openMenuBtn.classList.toggle('closed');
     closeMenuBtn.classList.toggle('closed');
     navMenu.classList.toggle('nav-mobile');
-  })
+  });
 
+  document.addEventListener("scroll", (event) => {
+    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 80) &&  !menuItems[4].classList.contains('active')){
+      menuItems[2].classList.remove('active');
+      menuItems[3].classList.remove('active');
+      menuItems[4].classList.add('active');
+      return;
+    } else if (window.scrollY >= (artistsSection.offsetTop - 80) &&  !menuItems[3].classList.contains('active') && window.scrollY < (partnersSection.offsetTop - 500)) {
+      menuItems[2].classList.remove('active');
+      menuItems[4].classList.remove('active');
+      menuItems[3].classList.add('active');
+      return;
+    } else if (window.scrollY >= (programSection.offsetTop - 80) &&  !menuItems[2].classList.contains('active') && window.scrollY < (artistsSection.offsetTop - 80)){
+      menuItems[4].classList.remove('active');
+      menuItems[3].classList.remove('active');
+      menuItems[2].classList.add('active');
+      return;
+    } else if (window.scrollY < (programSection.offsetTop - 80) &&  menuItems[2].classList.contains('active')){
+      menuItems[2].classList.remove('active');
+      menuItems[3].classList.remove('active');
+      menuItems[4].classList.remove('active');
+      return;
+    }
+  });
   getArtistsResume(artistContainer);
 };
 
