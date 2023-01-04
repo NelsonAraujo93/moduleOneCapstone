@@ -43,12 +43,14 @@ const artistArray = [
   },
 ];
 
+let getArtistsResume = () => {};
+
 const getArtists = (parent) => {
   const btnShowMore = document.getElementById('btn-more');
   btnShowMore.remove();
   artistArray.map((item, i) => {
-    if(i>=2){
-      const article = document.createElement('article');
+    const article = document.createElement('article');
+    if (i >= 2) {
       article.className = 'artist-card';
       article.innerHTML = `
         <div class="card-image">
@@ -64,8 +66,8 @@ const getArtists = (parent) => {
           <div class="little-deco third-background"></div>
           <p class="lato-font fourth-color">${item.data}</p>
         </div>`;
-      parent.append(article);
     }
+    return i >= 2 ? parent.append(article) : undefined;
   });
 
   const btnShowLess = document.createElement('button');
@@ -73,13 +75,13 @@ const getArtists = (parent) => {
   btnShowLess.innerHTML = 'Show less';
   btnShowLess.classList.add('secondary-btn', 'white-background', 'fourth-color', 'lato-font', 'uppercase');
   btnShowLess.addEventListener('click', () => {
-    parent.innerHTML='';
+    parent.innerHTML = '';
     getArtistsResume(parent);
   });
   parent.append(btnShowLess);
 };
 
-const getArtistsResume = (parent) => {
+getArtistsResume = (parent) => {
   const btnShowMore = document.createElement('button');
   btnShowMore.id = 'btn-more';
   btnShowMore.innerHTML = 'Show more';
@@ -88,8 +90,8 @@ const getArtistsResume = (parent) => {
     getArtists(parent);
   });
   artistArray.map((item, i) => {
-    if(i<2){
-      const article = document.createElement('article');
+    const article = document.createElement('article');
+    if (i < 2) {
       article.className = 'artist-card';
       article.innerHTML = `
         <div class="card-image">
@@ -105,12 +107,11 @@ const getArtistsResume = (parent) => {
           <div class="little-deco third-background"></div>
           <p class="lato-font fourth-color">${item.data}</p>
         </div>`;
-      parent.append(article);
     }
+    return i < 2 ? parent.append(article) : undefined;
   });
   parent.append(btnShowMore);
 };
-
 
 const init = () => {
   const openMenuBtn = document.getElementById('open-nav-btn');
@@ -122,18 +123,18 @@ const init = () => {
   const artistContainer = document.getElementById('artist-list');
   const menuItems = document.querySelectorAll('.menu-item');
 
-  for(let i = 0; i < menuItems.length; i += 1){
-    if(window.innerWidth<768){
+  for (let i = 0; i < menuItems.length; i += 1) {
+    if (window.innerWidth < 768) {
       menuItems[i].addEventListener('click', () => {
         openMenuBtn.classList.toggle('closed');
         closeMenuBtn.classList.toggle('closed');
         navMenu.classList.toggle('nav-mobile');
-        if(menuItems[i]===4){
+        if (menuItems[i] === 4) {
           menuItems[i].classList.add('active');
         }
       });
     }
-  };
+  }
 
   openMenuBtn.addEventListener('click', () => {
     openMenuBtn.classList.toggle('closed');
@@ -147,27 +148,23 @@ const init = () => {
     navMenu.classList.toggle('nav-mobile');
   });
 
-  document.addEventListener("scroll", (event) => {
-    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 80) &&  !menuItems[4].classList.contains('active')){
+  document.addEventListener('scroll', () => {
+    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 80) && !menuItems[4].classList.contains('active')) {
       menuItems[2].classList.remove('active');
       menuItems[3].classList.remove('active');
       menuItems[4].classList.add('active');
-      return;
-    } else if (window.scrollY >= (artistsSection.offsetTop - 80) &&  !menuItems[3].classList.contains('active') && window.scrollY < (partnersSection.offsetTop - 500)) {
+    } else if (window.scrollY >= (artistsSection.offsetTop - 80) && !menuItems[3].classList.contains('active') && window.scrollY < (partnersSection.offsetTop - 500)) {
       menuItems[2].classList.remove('active');
       menuItems[4].classList.remove('active');
       menuItems[3].classList.add('active');
-      return;
-    } else if (window.scrollY >= (programSection.offsetTop - 80) &&  !menuItems[2].classList.contains('active') && window.scrollY < (artistsSection.offsetTop - 80)){
+    } else if (window.scrollY >= (programSection.offsetTop - 80) && !menuItems[2].classList.contains('active') && window.scrollY < (artistsSection.offsetTop - 80)) {
       menuItems[4].classList.remove('active');
       menuItems[3].classList.remove('active');
       menuItems[2].classList.add('active');
-      return;
-    } else if (window.scrollY < (programSection.offsetTop - 80) &&  menuItems[2].classList.contains('active')){
+    } else if (window.scrollY < (programSection.offsetTop - 80) && menuItems[2].classList.contains('active')) {
       menuItems[2].classList.remove('active');
       menuItems[3].classList.remove('active');
       menuItems[4].classList.remove('active');
-      return;
     }
   });
   getArtistsResume(artistContainer);

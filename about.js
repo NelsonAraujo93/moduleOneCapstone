@@ -4,8 +4,8 @@ const init = () => {
   const closeMenuBtn = document.getElementById('close-nav-btn');
   const menuItems = document.getElementsByClassName('menu-item');
 
-  for(let i = 0; i < menuItems.length; i += 1){
-    if(window.innerWidth<768){
+  for (let i = 0; i < menuItems.length; i += 1) {
+    if (window.innerWidth < 768) {
       menuItems[i].addEventListener('click', () => {
         openMenuBtn.classList.toggle('closed');
         closeMenuBtn.classList.toggle('closed');
@@ -15,7 +15,6 @@ const init = () => {
   }
 
   menuItems[1].classList.add('active');
-  
   openMenuBtn.addEventListener('click', () => {
     openMenuBtn.classList.toggle('closed');
     closeMenuBtn.classList.toggle('closed');
@@ -26,7 +25,7 @@ const init = () => {
     openMenuBtn.classList.toggle('closed');
     closeMenuBtn.classList.toggle('closed');
     navMenu.classList.toggle('nav-mobile');
-  })
+  });
 };
 
 init();
