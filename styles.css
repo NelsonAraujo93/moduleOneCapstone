@@ -36,7 +36,8 @@
 html {
   scroll-behavior: smooth;
 }
-/*globals*/
+
+/* globals */
 .full-width {
   width: 100%;
 }
@@ -59,7 +60,7 @@ main#landing {
   width: 100%;
 }
 
-/*Buttons*/
+/* Buttons */
 .main-btn {
   width: 80%;
   max-width: 260px;
@@ -108,7 +109,7 @@ main#landing {
   border-width: 2px;
 }
 
-/*Bg-Colors*/
+/* Bg-Colors */
 .primary-background {
   background: #5e5e5e;
 }
@@ -122,14 +123,14 @@ main#landing {
 }
 
 .fourth-background {
-  background:  #282a34;
+  background: #282a34;
 }
 
 .white-background {
   background: white;
 }
 
-/*Text-colors*/
+/* Text-colors */
 .primary-color {
   color: #5e5e5e;
 }
@@ -150,7 +151,7 @@ main#landing {
   color: white;
 }
 
-/*Fonts*/
+/* Fonts */
 .coco-font {
   font-family: 'Cocogoose-Regular', sans-serif;
 }
@@ -182,11 +183,13 @@ main#landing {
 .uppercase {
   text-transform: uppercase;
 }
+
 body {
   background-color: #f6f6f6;
   margin: 0;
 }
-/*Mobile nav*/
+
+/* Mobile nav */
 .main-logo {
   width: 200px;
   height: 160px;
@@ -254,7 +257,7 @@ body {
 
 .nav-mobile a {
   font-size: 30px;
-  font-family: 'Lato-Bold';
+  font-family: 'Lato-Bold', sans-serif;
   color: #282a34;
   text-decoration: none;
 }
@@ -263,7 +266,7 @@ body {
   color: #ec5242;
 }
 
-/*Header*/
+/* Header */
 header {
   position: relative;
   display: flex;
@@ -299,7 +302,7 @@ h1 {
   font-size: 48px;
 }
 
-/*Logistic Section*/
+/* Logistic Section */
 #logistic {
   display: flex;
   flex-direction: column;
@@ -344,6 +347,7 @@ h2.lato-font.white-color {
   justify-content: center;
   align-items: center;
 }
+
 .logistic-item-content {
   flex: 50% 0 0;
 }
@@ -364,7 +368,7 @@ h2.lato-font.white-color {
   align-items: center;
 }
 
-/*Artists*/
+/* Artists */
 #artists {
   display: flex;
   flex-direction: column;
@@ -382,7 +386,6 @@ h2.lato-font.white-color {
 }
 
 #artist-list {
-  padding: 0;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
@@ -418,7 +421,7 @@ h2.lato-font.white-color {
   text-align: left;
 }
 
-/*Partners*/
+/* Partners */
 #partners {
   display: flex;
   flex-direction: column;
@@ -446,11 +449,10 @@ h2.lato-font.white-color {
   justify-content: center;
   align-items: center;
   color: #5e5e5e;
-  font-family: 'Lato-Bold';
+  font-family: 'Lato-Bold', sans-serif;
 }
 
-/*Footer*/
-
+/* Footer */
 footer {
   display: flex;
   max-width: 1300px;
@@ -476,14 +478,14 @@ footer {
   max-height: 60px;
 }
 
-/*About-us*/
-.about-header{
+/* About-us */
+.about-header {
   text-align: center;
 }
 
 .about-header .header-content {
   border: 1px solid #e3e3e3;
-  background: #ffffff;
+  background: white;
   box-sizing: border-box;
   padding: 20px;
   text-align: center;
@@ -544,7 +546,7 @@ ul#festival-list {
 
 .festival-item {
   height: 200px;
-  background: url('./assets/2021.jpg'),#ec5242;
+  background: url('./assets/2021.jpg'), #ec5242;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -556,7 +558,7 @@ ul#festival-list {
 }
 
 .festival-item.twenty2 {
-  background: url('./assets/2022.jpg'),#ec5242;
+  background: url('./assets/2022.jpg'), #ec5242;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -582,7 +584,7 @@ ul#festival-list {
   #main-navigator {
     justify-content: center;
     background: white;
-    box-shadow: 0 1px 6px 2px #00000066;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 66);
   }
 
   #nav-menu {
@@ -616,7 +618,7 @@ ul#festival-list {
     color: #282a34;
   }
 
-  a.menu-item.active{
+  a.menu-item.active {
     color: #ec5242;
   }
 
@@ -664,10 +666,6 @@ ul#festival-list {
     width: 15%;
   }
 
-  footer {
-    justify-content: center;
-  }
-
   ul#festival-list {
     flex-direction: row;
   }
@@ -682,6 +680,7 @@ ul#festival-list {
 
   footer {
     max-width: unset;
+    justify-content: center;
   }
 
   footer .wrapper {
