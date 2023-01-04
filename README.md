@@ -213,6 +213,7 @@ If you like this project take the time to give feedback, I will appreciate it.
 > Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse for giving me the chance to improve my coding.
+Also Greatings to Cindy Shin the author of the original design, this is her Behance profile. [Cindy Shin](https://www.behance.net/adagio07)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
