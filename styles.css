@@ -573,9 +573,24 @@ ul#festival-list {
 }
 
 .rigth-container {
-  text-align: center;
+  text-align: left;
 }
 
+footer .wrapper {
+  flex-direction: row;
+}
+
+.wrapper.mobile {
+  display: flex;
+}
+
+.wrapper.desktop {
+  display: none;
+}
+
+#about-us footer {
+  background: white;
+}
 @media screen and (min-width: 768px) {
   header {
     padding: 180px 30px;
@@ -733,5 +748,34 @@ ul#festival-list {
 
   .rigth-container {
     text-align: left;
+  }
+
+  #logistic {
+    padding: 60px 20px;
+  }
+
+  #logistic button {
+    display: none;
+  }
+
+  #logistic a {
+    height: 28px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  .wrapper.desktop {
+    display: flex;
+  }
+
+  .wrapper.mobile {
+    display: none;
+  }
+
+  #about-us footer {
+    background: #282a34;
+  }
+
+  #about-us #partners{
+    display: none;
   }
 }
