@@ -398,6 +398,15 @@ h2.lato-font.white-color {
   padding: 0 20px;
 }
 
+#artist-list-desktop {
+  display: none;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
 .card-image {
   display: flex;
   flex: 2 0 0;
@@ -703,9 +712,14 @@ footer .wrapper {
     transform: scale(1.02);
   }
 
-  #artist-list {
+  #artist-list-desktop {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  #artist-list {
+    display: none;
   }
 
   .artist-card {

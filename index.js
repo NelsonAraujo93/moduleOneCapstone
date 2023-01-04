@@ -81,6 +81,28 @@ const getArtists = (parent) => {
   parent.append(btnShowLess);
 };
 
+const getArtistsDesktop = (parent) => {
+  artistArray.map((item, i) => {
+    const article = document.createElement('article');
+    article.className = 'artist-card';
+    article.innerHTML = `
+      <div class="card-image">
+        <img class="full-width" src=" ${item.image}" alt="${item.image_alt}">
+      </div>
+      <div class="card-container">
+        <h3 class="fourth-color lato-font-bold">
+          ${item.name}
+        </h3>
+        <h5 class="secondary-color lato-font-italic">
+          ${item.aka}
+        </h5>
+        <div class="little-deco third-background"></div>
+        <p class="lato-font fourth-color">${item.data}</p>
+      </div>`;
+    return parent.append(article);
+  });
+};
+
 getArtistsResume = (parent) => {
   const btnShowMore = document.createElement('button');
   btnShowMore.id = 'btn-more';
@@ -121,6 +143,7 @@ const init = () => {
   const partnersSection = document.getElementById('partners');
   const closeMenuBtn = document.getElementById('close-nav-btn');
   const artistContainer = document.getElementById('artist-list');
+  const artistContainerDesktop = document.getElementById('artist-list-desktop');
   const menuItems = document.querySelectorAll('.menu-item');
 
   for (let i = 0; i < menuItems.length; i += 1) {
@@ -168,6 +191,7 @@ const init = () => {
     }
   });
   getArtistsResume(artistContainer);
+  getArtistsDesktop(artistContainerDesktop)
 };
 
 init();
