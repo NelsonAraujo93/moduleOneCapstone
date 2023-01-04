@@ -82,7 +82,7 @@ const getArtists = (parent) => {
 };
 
 const getArtistsDesktop = (parent) => {
-  artistArray.map((item, i) => {
+  artistArray.map((item) => {
     const article = document.createElement('article');
     article.className = 'artist-card';
     article.innerHTML = `
@@ -191,7 +191,7 @@ const init = () => {
     }
   });
   getArtistsResume(artistContainer);
-  getArtistsDesktop(artistContainerDesktop)
+  getArtistsDesktop(artistContainerDesktop);
 };
 
 init();
