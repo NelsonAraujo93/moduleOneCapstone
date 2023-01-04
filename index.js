@@ -149,15 +149,15 @@ const init = () => {
   });
 
   document.addEventListener('scroll', () => {
-    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 80) && !menuItems[4].classList.contains('active')) {
+    if ((window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - 10) && !menuItems[4].classList.contains('active')) {
       menuItems[2].classList.remove('active');
       menuItems[3].classList.remove('active');
       menuItems[4].classList.add('active');
-    } else if (window.scrollY >= (artistsSection.offsetTop - 80) && !menuItems[3].classList.contains('active') && window.scrollY < (partnersSection.offsetTop - 500)) {
+    } else if (window.scrollY >= (artistsSection.offsetTop - 300) && !menuItems[3].classList.contains('active') && window.scrollY < (partnersSection.offsetTop - 100)) {
       menuItems[2].classList.remove('active');
       menuItems[4].classList.remove('active');
       menuItems[3].classList.add('active');
-    } else if (window.scrollY >= (programSection.offsetTop - 80) && !menuItems[2].classList.contains('active') && window.scrollY < (artistsSection.offsetTop - 80)) {
+    } else if (window.scrollY >= (programSection.offsetTop - 80) && !menuItems[2].classList.contains('active') && window.scrollY < (artistsSection.offsetTop - 300)) {
       menuItems[4].classList.remove('active');
       menuItems[3].classList.remove('active');
       menuItems[2].classList.add('active');
