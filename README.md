@@ -35,11 +35,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [My Microverse Portfolio] <a name="about-project"></a>
+# 📖 [Module 1 Capstone Project] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[My Microverse Portfolio]** is a project to learn good practices in website UX/ UI design by applying media queries to get our website a nice look and feel on different screen sizes and devices.
+**[Module 1 Capstone Project]** The capstone project is the first module project in the Microverse Course, it is an oportunity for the Micronauts to test their learnings and to create a good looking and functional project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,6 +53,9 @@
     <li>HTML5</li>
     <li>CSS</li>
     <li>JS</li>
+    <li>ESLint</li>
+    <li>StyleLints</li>
+    <li>GitFlow</li>
   </ul>
 </details>
 
@@ -64,7 +67,7 @@
 
 - **[Responsiveness]**
 - **[Git flow]**
-- **[Good HTML and CSS practices]**
+- **[Good HTML, JS and CSS practices]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,14 +103,14 @@ Example command:
 
 ### Setup
 
-In order to run this project you need: https://github.com/NelsonAraujo93/MyMicroversePortfolio.git
+In order to run this project you need: [https://github.com/NelsonAraujo93/moduleOneCapstone.git]
 
 <!--
 Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/NelsonAraujo93/moduleOneCapstone.git
 ```
 --->
 
@@ -180,9 +183,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[JavaScript (Functions)]**
-- [ ] **[Animations]**
-- [ ] **[JS linters]**
+- [ ] **[Subs]**
+- [ ] **[Blog]**
+- [ ] **[Notifications]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,7 +195,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).](https://github.com/NelsonAraujo93/MyMicroversePortfolio/issues/7)
+Feel free to check the [issues page](https://github.com/NelsonAraujo93/moduleOneCapstone/issues/1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,7 +227,7 @@ I would like to thank Microverse for giving me the chance to improve my coding.
 
 - **What is this for?**
 
-  - This is a Microverse portfolio activity to help us learn how to create a nice portfolio and responsive website.
+  - This is a Microverse Module 1 Capstone activity to help us learn how to create a nice website with best practices.
 
 - **Can i copy this project?**
 
